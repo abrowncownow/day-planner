@@ -1,7 +1,6 @@
 //set header date
 var today = moment().format("dddd MM/DD/YY");
 $("#currentDay").text(today);
-
 //save function
 function saveLS(event) {
     event.preventDefault();
@@ -12,12 +11,20 @@ function saveLS(event) {
     localStorage.setItem("row" + index, thisText);
 }
 //load function
-function loadLS(){
-    for (i=8; i<19; i++){
-        if (localStorage.getItem("row" + i)){
-        var data = localStorage.getItem("row" + i);
-        console.log(data);
-        $(".textArea" + i).val(data);}
+function loadLS() {
+    for (i = 8; i < 24; i++) {
+        if (localStorage.getItem("row" + i)) {
+            var data = localStorage.getItem("row" + i);
+            console.log(data);
+            $(".textArea" + i).val(data);
+        }
+        if (i < moment().hours()) {
+            $(".textArea" + i).addClass("past");
+        } else if (i == moment().hours()) {
+            $(".textArea" + i).addClass("present");
+        } else if (i > moment().hours()) {
+            $(".textArea" + i).addClass("future");
+        }
     }
 }
 //load and listen
