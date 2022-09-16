@@ -5,7 +5,6 @@ $("#currentDay").text(today);
 function saveLS(event) {
     event.preventDefault();
     index = $(this).data("index");
-    console.log(index);
     var thisText = $(".textArea" + index).val();
     console.log(thisText);
     localStorage.setItem("row" + index, thisText);
@@ -15,7 +14,6 @@ function loadLS() {
     for (i = 8; i < 25; i++) {
         if (localStorage.getItem("row" + i)) {
             var data = localStorage.getItem("row" + i);
-            console.log(data);
             $(".textArea" + i).val(data);
         }
         //style backgrounds depending on past, present, future
