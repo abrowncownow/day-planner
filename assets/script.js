@@ -4,10 +4,15 @@ $("#currentDay").text(today);
 //save function
 function saveLS(event) {
     event.preventDefault();
-    index = $(this).data("index");
+    var thisbtn = $(this);
+    var index = $(this).data("index");
     var thisText = $(".textArea" + index).val();
     console.log(thisText);
     localStorage.setItem("row" + index, thisText);
+    $(this).addClass("saved");
+    setTimeout(function(){
+        thisbtn.removeClass("saved");
+    }, 1500);
 }
 //load function
 function loadLS() {
