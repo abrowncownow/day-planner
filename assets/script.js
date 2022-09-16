@@ -12,12 +12,13 @@ function saveLS(event) {
 }
 //load function
 function loadLS() {
-    for (i = 8; i < 24; i++) {
+    for (i = 8; i < 25; i++) {
         if (localStorage.getItem("row" + i)) {
             var data = localStorage.getItem("row" + i);
             console.log(data);
             $(".textArea" + i).val(data);
         }
+        //style backgrounds depending on past, present, future
         if (i < moment().hours()) {
             $(".textArea" + i).addClass("past");
         } else if (i == moment().hours()) {
