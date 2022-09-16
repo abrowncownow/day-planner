@@ -13,7 +13,7 @@ function saveLS(event) {
 }
 //load function
 function loadLS(){
-    for (i=1; i<12; i++){
+    for (i=8; i<19; i++){
         if (localStorage.getItem("row" + i)){
         var data = localStorage.getItem("row" + i);
         console.log(data);
