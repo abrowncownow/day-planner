@@ -73,8 +73,8 @@ textarea {
 
 .saved {
 border-radius: 8px;
-box-shadow: 5px 5px 10px 5px rgba(2, 226, 2, 0.678);
-background-color: rgba(5, 207, 5, 0.3);;
+box-shadow: 5px 5px 15px 5px rgba(230, 6, 250, 0.678);
+background-color: rgba(230, 6, 250, 0.4);
 }
 .unsaved{
   box-shadow: none;

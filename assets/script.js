@@ -12,7 +12,7 @@ function saveLS(event) {
     $(this).addClass("saved");
     setTimeout(function(){
         thisbtn.removeClass("saved");
-    }, 1500);
+    }, 1250);
 }
 //load function
 function loadLS() {
