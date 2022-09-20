@@ -10,9 +10,7 @@ function saveLS(event) {
     console.log(thisText);
     localStorage.setItem("row" + index, thisText);
     $(this).addClass("saved");
-    setTimeout(function(){
-        thisbtn.removeClass("saved");
-    }, 1250);
+    setTimeout(function(){thisbtn.removeClass("saved");}, 1250);
 }
 //load function
 function loadLS() {
